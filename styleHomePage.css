@@ -6,10 +6,10 @@ body {
   }
 /*Moving images*/
 .goalimg {
-  transform: translateX(100px) translateY(400px);
+  transform: translateX(100px) translateY(500px);
 }
 .chatimg{
-  transform: translateX(300px) translateY(400px);
+  transform: translateX(300px) translateY(500px);
 }
 .browseimg{
   transform: translateX(1000px) translateY(300px);
