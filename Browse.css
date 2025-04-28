@@ -1,0 +1,56 @@
+/*Background*/
+body {
+  background-image: url(Regpage.png);
+  background-size: cover; 
+  background-position: center top;
+  background-repeat: no-repeat;
+}
+/*the name at the top*/
+h1{
+  font-family: monospace;
+  text-align: center;
+}
+/*navigation bar*/
+.navbar {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  background-color: #ff914d;
+  font-family: sans-serif;
+}
+
+.navbar li {
+  display: inline-block;
+}
+
+.navbar li a {
+  color: white;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  display: block;
+}
+
+.navbar li a:hover {
+  background-color: #d36625
+}
+
+/*recipe cards*/
+.card {
+  max-width: 500px;
+  margin: 20px auto;
+  padding: 16px;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  font-family: sans-serif;
+  background-color: #fff;
+}
+
+ul.cardList, ol.cardList {
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+  margin-bottom: 8px;
+}
+
+

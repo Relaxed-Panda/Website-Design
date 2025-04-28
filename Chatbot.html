@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Food Finder Quiz</title>
+    <link rel="stylesheet" href="chatbot.css">
+</head>
+<body>
+    <h1>TrendyBytes</h1>
+  <!-- Navigation Bar -->
+  <ul class="navbar">
+    <li><a href="Homepage.html">Home</a></li>
+    <li><a href="Browse.html">Browse</a></li>
+    <li><a href="ourGoal.html">Our Goal</a></li>
+    <li><a href="Chatbot.html">Chatbot</a></li>
+    <li><a href="referance.HTml">Resources</a></li>
+  </ul>
+    <div class="container">
+        <h2>Welcome to the Food Finder Chatbot!</h2>
+        <p>How may I help you? (Choose an option below)</p>
+        
+        <div id="quizstep1">
+            <button onclick="step1('1')">1. Find viral recipes</button>
+            <button onclick="step1('2')">2. I need help</button>
+        </div>
+
+        <div id="quizstep2" style="display:none;">
+            <p>Are you looking for a dessert (1) or a meal (2)?</p>
+            <button onclick="step2('1')">1. Dessert</button>
+            <button onclick="step2('2')">2. Meal</button>
+        </div>
+
+        <div id="quizstep3meal" style="display:none;">
+            <p>Would you like a Protein Recipe (1), a quick prep meal (2), or a healthy meal (3)?</p>
+            <button onclick="step3('1')">1. Protein Recipe</button>
+            <button onclick="step3('2')">2. Quick Prep Meal</button>
+            <button onclick="step3('3')">3. Healthy Meal</button>
+        </div>
+
+        <div id="quizstep3dessert" style="display:none;">
+            <p>Would you like a no-bake recipe (1) or a baking recipe (2)?</p>
+            <button onclick="step3('1', 'dessert')">1. No-Bake</button>
+            <button onclick="step3('2', 'dessert')">2. Baking Recipe</button>
+        </div>
+
+        <div id="result" class="result" style="display:none;"></div>
+    </div>
+
+    <script>
+        function step1(choice) {
+            if (choice === '2') {
+                alert("Please contact CustomerSupportEmailExample.adress for assistance.");
+                return;
+            }
+            document.getElementById('quizstep1').style.display = 'none';
+            document.getElementById('quizstep2').style.display = 'block';
+        }
+
+        function step2(choice) {
+            document.getElementById('quizstep2').style.display = 'none';
+
+            if (choice === '2') {
+                document.getElementById('quizstep3meal').style.display = 'block';
+            } else {
+                document.getElementById('quizstep3dessert').style.display = 'block';
+            }
+        }
+
+        function step3(choice, type = 'meal') {
+            let result = "";
+            if (type === 'meal') {
+                if (choice === '1') {
+                    result = "The Chicken Recipe from the Minecraft Movie is a great recipe! You can find it in browse.";
+                } else if (choice === '2') {
+                    result = "The Shin Ramen Egg Suffle is an exquisite meal made entirely from your microwave! You can find it in browse!";
+                } else if (choice === '3') {
+                    result = "The salad is a hearty and fresh meal perfect for you to feast on! You can find it in browse!";
+                }
+            } else {
+                if (choice === '1') {
+                    result = 'The No Bake Cheesecake is my favorite dish! You can find it in browse!';
+                } else if (choice === '2') {
+                    result = 'Nothing tops the best Dubai Chocolate! You can find it in browse!';
+                }
+            }
+
+            document.getElementById('quizstep3meal').style.display = 'none';
+            document.getElementById('quizstep3dessert').style.display = 'none';
+            document.getElementById('result').innerText = result;
+            document.getElementById('result').style.display = 'block';
+        }
+    </script>
+</body>
+</html>
