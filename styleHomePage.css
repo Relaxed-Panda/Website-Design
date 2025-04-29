@@ -5,12 +5,4 @@ body {
     background-repeat: no-repeat;
   }
 /*Moving images*/
-.goalimg {
-  transform: translateX(100px) translateY(400px);
-}
-.chatimg{
-  transform: translateX(300px) translateY(400px);
-}
-.browseimg{
-  transform: translateX(1140px) translateY(300px);
-}
+
